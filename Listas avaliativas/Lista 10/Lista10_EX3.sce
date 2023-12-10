@@ -1,0 +1,14 @@
+clear;clc;
+E=205000;//N/mm²
+b=50:2:70;
+h=95:-2:75;
+I=b.*h.^3/12;
+//P=10;//N
+L=60000;//mm
+K=10^3*48*E.*I/L^3
+plot(b,K);
+plot(h,K);
+legend("b","h");
+xlabel("Dimensões(mm)");
+ylabel("K(N/m)");
+xgrid;
